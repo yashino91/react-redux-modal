@@ -6,6 +6,7 @@ import {createReducer}  from './utils.js';
 export const ADD_MODAL = '@react-redux-modal.ADD_MODAL';
 export const REMOVE_MODAL = '@react-redux-modal.REMOVE_MODAL';
 export const CLEAR_ALL = '@react-redux-modal.CLEAR_ALL';
+export const UPDATE_OPTIONS = 'UPDATE_OPTIONS';
 
 const initialSate = {
   modals: []
@@ -34,6 +35,10 @@ export default createReducer(initialSate, {
     return {
       modals: []
     };
+  }
+  [UPDATE_OPTIONS]: () => {
+    console.log("UPDATE OPTIONS TEST");
+    return state;
   }
 });
 
